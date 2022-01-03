@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void){
+    // create an array with square brackets
+    int luckyNums[] = {4, 13, 21, 33};
+
+    // if you know the number of elements to put an array you can do
+    // int luckyNums[4] = {4, 13, 21, 33};
+
+    // accessing individual element in an array
+    cout << luckyNums[1] << endl;
+
+    // modifying an element in an array
+    luckyNums[1] = 99;
+    cout << luckyNums[1] << endl;
+
+    // adding more elements to an array
+    luckyNums[10] = 100;
+    cout << luckyNums[10] << endl;
+
+    return 0;
+}

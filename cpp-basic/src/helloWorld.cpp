@@ -1,6 +1,11 @@
 #include <iostream>
 
+using namespace std;
+
 int main(void){
-    int x = 5;
-    std::cout << "Hello World" << std::endl;
+    // any line of code written in a main() function will be executed 
+
+    cout << "Hello World\n";
+
+    return 0;
 }

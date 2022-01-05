@@ -4,8 +4,6 @@ Study material and outline provided by
 
 - freeCodeCamp.org YouTube channel: [C++ Tutorial for Beginners - Full Course - YouTube](https://youtu.be/vLnPwxZdW4Y)
 
-
-
 ## Installation & Environment Setup
 
 ### Ubuntu Based System
@@ -20,7 +18,5 @@ sudo apt install -y build-essential gdb
 VS Code Environment Setup for C/CC++ development:
 
 - [Visual Studio Code for C/C++ on Linux (2021) - YouTube](https://www.youtube.com/watch?v=9pjBseGfEPU)
-
-
 
 

@@ -1,4 +1,5 @@
-*/bin
+bin
+cpp-basic/bin
 
 # Prerequisites
 *.d

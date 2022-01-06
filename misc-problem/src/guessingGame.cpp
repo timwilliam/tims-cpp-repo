@@ -1,0 +1,80 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+void printMenu(){
+    cout << "0. Quit\n";
+    cout << "1. Play Game\n";
+    cout << "Enter choice: ";
+
+    return;
+}
+
+void printArray(int array[], int counter){
+    for(int i = 0; i <= counter; i++){
+        cout << array[i] << " ";
+    }
+
+    cout << endl;
+    return;
+}
+
+void playGame(){
+    cout << "Welcome to guessing game!\n";
+    
+    int nTries = 5, counter = 0;
+    int random = rand() % 101; // modulus by 100 to get a number between 0 - 100  
+    int guess, guesses[nTries];
+
+    while(nTries > 0){
+        cout << "Enter your guess: ";
+        cin >> guess;
+        guesses[counter] = guess;
+
+        if(guess > random){
+            cout << "Your guess is too high, try again!\n";
+        }else if(guess < random){
+            cout << "Your guess is too low, try again!\n";
+        }else{
+            cout << "Your guess is correct, you win!\n\n";
+            cout << "Here is a list of your guesses: ";
+            printArray(guesses, counter);
+            cout << endl;
+
+            return;
+        }
+
+        counter++;
+        nTries--;
+    }
+
+    cout << "You lost!\n\n";
+    return;
+}
+
+int main(){
+    // seed the random number generator so that we get different number everytime, only need to do once
+    srand(time(NULL));
+
+    int choice;
+
+    do
+    {
+        printMenu();
+        cin >> choice;
+
+        switch (choice)
+        {
+            case 1:
+                playGame();
+                break;
+            default:
+                exit(0);
+        }
+    } while (true);
+    
+    return 0;
+}

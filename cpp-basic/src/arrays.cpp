@@ -2,6 +2,15 @@
 
 using namespace std;
 
+void printArray(int array[], int size){
+    for(int i = 0; i < size; i++){
+        cout << array[i] << " ";
+    }
+
+    cout << endl;
+    return;
+}
+
 int main(void){
     // create an array with square brackets
     int luckyNums[] = {4, 13, 21, 33};
@@ -19,6 +28,9 @@ int main(void){
     // adding more elements to an array
     luckyNums[10] = 100;
     cout << luckyNums[10] << endl;
+
+    cout << sizeof(luckyNums) / sizeof(luckyNums[0]) << endl;
+    printArray(luckyNums, sizeof(luckyNums) / sizeof(luckyNums[0]));
 
     return 0;
 }

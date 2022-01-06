@@ -1,5 +1,6 @@
 bin
 cpp-basic/bin
+misc-problem/bin
 
 # Prerequisites
 *.d

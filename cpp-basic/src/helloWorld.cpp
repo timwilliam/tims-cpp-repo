@@ -23,7 +23,7 @@ int main(void){
     // - namespace can be a solution to differentiate between them, preventing naming conflicts
 
     // by prefixing with appropiate namespace, we can be very specific about what item you are trying to reference
-    std::cout << "Hello Word\n";
+    std::cout << "Hello World\n";
 
     cout << "Hello World\n";
 

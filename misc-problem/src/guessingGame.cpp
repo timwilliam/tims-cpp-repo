@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <string>
 #include <cstdlib>
 #include <ctime>
@@ -13,8 +14,8 @@ void printMenu(){
     return;
 }
 
-void printArray(int array[], int counter){
-    for(int i = 0; i <= counter; i++){
+void printArray(vector <int> array){
+    for(int i = 0; i < array.size(); i++){
         cout << array[i] << " ";
     }
 
@@ -25,14 +26,14 @@ void printArray(int array[], int counter){
 void playGame(){
     cout << "Welcome to guessing game!\n";
     
-    int nTries = 5, counter = 0;
+    int nTries = 5, guess;
     int random = rand() % 101; // modulus by 100 to get a number between 0 - 100  
-    int guess, guesses[nTries];
+    vector <int> guesses;
 
     while(nTries > 0){
         cout << "Enter your guess: ";
         cin >> guess;
-        guesses[counter] = guess;
+        guesses.push_back(guess);
 
         if(guess > random){
             cout << "Your guess is too high, try again!\n";
@@ -41,13 +42,12 @@ void playGame(){
         }else{
             cout << "Your guess is correct, you win!\n\n";
             cout << "Here is a list of your guesses: ";
-            printArray(guesses, counter);
+            printArray(guesses);
             cout << endl;
 
             return;
         }
 
-        counter++;
         nTries--;
     }
 

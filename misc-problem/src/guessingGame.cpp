@@ -14,9 +14,9 @@ void printMenu(){
     return;
 }
 
-void printArray(vector <int> array){
-    for(int i = 0; i < array.size(); i++){
-        cout << array[i] << " ";
+void printVector(vector <int> data){
+    for(int i = 0; i < data.size(); i++){
+        cout << data[i] << " ";
     }
 
     cout << endl;
@@ -42,7 +42,7 @@ void playGame(){
         }else{
             cout << "Your guess is correct, you win!\n\n";
             cout << "Here is a list of your guesses: ";
-            printArray(guesses);
+            printVector(guesses);
             cout << endl;
 
             return;

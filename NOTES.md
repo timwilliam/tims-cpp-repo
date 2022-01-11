@@ -3,6 +3,7 @@
 Study material and outline provided by
 
 - freeCodeCamp.org YouTube channel: [C++ Tutorial for Beginners - Full Course - YouTube](https://youtu.be/vLnPwxZdW4Y)
+- Caleb Curry YouTube channel [C++ Programming All-in-One Tutorial Series (10 HOURS!) - YouTube](https://youtu.be/_bYFu9mBnr4)
 
 ## Installation & Environment Setup
 

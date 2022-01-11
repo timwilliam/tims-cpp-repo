@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ void printVector(vector <int> data){
 void playGame(){
     cout << "Welcome to guessing game!\n";
     
-    int nTries = 5, guess;
+    int nTries = 5, guess, count = 0;
     int random = rand() % 101; // modulus by 100 to get a number between 0 - 100  
     vector <int> guesses;
 
@@ -34,6 +35,8 @@ void playGame(){
         cout << "Enter your guess: ";
         cin >> guess;
         guesses.push_back(guess);
+
+        count++;
 
         if(guess > random){
             cout << "Your guess is too high, try again!\n";
@@ -44,6 +47,22 @@ void playGame(){
             cout << "Here is a list of your guesses: ";
             printVector(guesses);
             cout << endl;
+
+            ifstream input("bestScore.txt");
+            if(!input.is_open()){
+                cout << "Unable to read file!\n";
+                return;
+            }
+
+            int bestScore;
+            input >> bestScore;
+            input.close();
+
+            ofstream output("bestScore.txt");
+            if(count < bestScore){
+                output << count;
+            }
+            output.close();
 
             return;
         }

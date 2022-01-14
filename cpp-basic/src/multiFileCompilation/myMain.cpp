@@ -1,7 +1,7 @@
 #include <iostream>
 #include "myMathLib.h" // our custom library
 
-using namespace std;
+// using namespace std;
 
 // The general idea is to break up your program into 3 files: header file (*.h), implementation file (*.cpp), main file (*.cpp)
 // - in the code, including our own custom header file looks like this: #include "myLib.h" (notice the double quotes)
@@ -26,8 +26,8 @@ using namespace std;
 // - this also save time for you as you don't have to type all of the command to compile the code manually, instead we just run the command make
 
 int main(void){
-    cout << getPow(5) << endl;
-    cout << getPow(5, 2) << endl;
+    std::cout << mathUtil::getPow(5) << std::endl;
+    std::cout << mathUtil::getPow(5, 2) << std::endl;
     
     return 0;
 }

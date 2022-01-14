@@ -2,9 +2,11 @@
 #ifndef MYMATHLIB
 #define MYMATHLIB
 
-// function declarations
-double area(double);
-double area(double, double);
-double getPow(double base, int pow = 2);
+namespace mathUtil{
+    // function declarations
+    double area(double);
+    double area(double, double);
+    double getPow(double base, int pow = 2);
+}
 
 #endif

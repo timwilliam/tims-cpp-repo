@@ -15,6 +15,10 @@ using namespace std;
 // - when you want to distribute your code but the source code hidden, use the -c flag and the *.o files
 // - if you are doing open source, then distribute the cpp files
 
+// This file needs the other 2 file to be compiled properly, myMathLib.cpp, and myMathLib.h
+// - to compile, run the following in the terminal: g++ myMain.cpp myMathLib.cpp
+// - then you can run the program with ./a.out
+
 int main(void){
     cout << getPow(5) << endl;
     cout << getPow(5, 2) << endl;

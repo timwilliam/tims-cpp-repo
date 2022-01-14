@@ -19,6 +19,12 @@ using namespace std;
 // - to compile, run the following in the terminal: g++ myMain.cpp myMathLib.cpp
 // - then you can run the program with ./a.out
 
+// The purpose of a Makefile is to automate the build process, its a way to describe the compilation process
+// - makefile can automatically compile only the code that has changed, very useful in application with many codes
+// - when compiling a code file (*.cpp), you can get the executable directly, or you can generate an object (*.o) code first
+// - with the generated object file, we can link them together along with the header file (*.h) and get our executable (a.out)
+// - this also save time for you as you don't have to type all of the command to compile the code manually, instead we just run the command make
+
 int main(void){
     cout << getPow(5) << endl;
     cout << getPow(5, 2) << endl;

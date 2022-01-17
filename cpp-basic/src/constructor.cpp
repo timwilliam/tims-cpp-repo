@@ -23,6 +23,7 @@ using namespace std;
 
 // There is also actually a fifth function called destructor
 // - it is called when an object is being deleted or no longer in use
+// - it is identified by the class name but with a tilde symbol in front of it
 
 // most data can't be represented by only using primitive data types
 // so in C++, we have a class, a blueprint for new type of data
@@ -33,6 +34,7 @@ class Book{
 
         // a constructor is a function that gets called everytime we create an object of a class
         // constructor to create object, and initialize it
+        // constructor used the same name as a class and does not has a return value
         Book(){
             title = "No Title";
             author = "No Author";

@@ -17,7 +17,10 @@ class User{
         std::string getStatus();
 
         User(std::string firstName, std::string lastName, std::string status);
+        User();
         ~User();
+
+        virtual void output(); // polymorphism; override in subclasses
 
         friend std::ostream& operator << (std::ostream& output, const User user);
         friend std::istream& operator >> (std::istream &input, User &user);

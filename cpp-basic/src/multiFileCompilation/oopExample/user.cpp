@@ -16,6 +16,11 @@ std::string User::getStatus(){
     return status;
 }
 
+User::User(){
+    std::cout << "User created\n";
+    userCount++;
+}
+
 User::User(std::string firstName, std::string lastName, std::string status){
     this->firstName = firstName;
     this->lastName = lastName;
@@ -25,6 +30,10 @@ User::User(std::string firstName, std::string lastName, std::string status){
 
 User::~User(){
     userCount--;
+}
+
+void User::output(){
+    std::cout << "I am a user\n";
 }
 
 // friend method, used to create a function that can access the private data member directly without setters and getters
